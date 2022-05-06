@@ -164,7 +164,7 @@ export default class Watcher {
    */
   update () {
     /* istanbul ignore else */
-    if (this.lazy) {
+    if (this.lazy) {  // computed 使用
       this.dirty = true
     } else if (this.sync) {
       this.run()
@@ -219,6 +219,7 @@ export default class Watcher {
       this.deps[i].depend()
     }
   }
+
 
   /**
    * Remove self from all dependencies' subscriber list.
